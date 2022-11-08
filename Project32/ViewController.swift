@@ -12,7 +12,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    var projects = [[String]]()
+    var projects = [Project]()
     var favorites = [Int]()
 
     override func viewDidLoad() {
@@ -26,14 +26,14 @@ class ViewController: UITableViewController {
         tableView.isEditing = true
         tableView.allowsSelectionDuringEditing = true
         
-        projects.append(["Project 1: Storm Viewer", "Constants and variables, UITableView, UIImageView, FileManager, storyboards"])
-        projects.append(["Project 2: Guess the Flag", "@2x and @3x images, asset catalogs, integers, doubles, floats, operators (+= and -=), UIButton, enums, CALayer, UIColor, random numbers, actions, string interpolation, UIAlertController"])
-        projects.append(["Project 3: Social Media", "UIBarButtonItem, UIActivityViewController, the Social framework, URL"])
-        projects.append(["Project 4: Easy Browser", "loadView(), WKWebView, delegation, classes and structs, URLRequest, UIToolbar, UIProgressView., key-value observing"])
-        projects.append(["Project 5: Word Scramble", "Closures, method return values, booleans, NSRange"])
-        projects.append(["Project 6: Auto Layout", "Get to grips with Auto Layout using practical examples and code"])
-        projects.append(["Project 7: Whitehouse Petitions", "JSON, Data, UITabBarController"])
-        projects.append(["Project 8: 7 Swifty Words", "addTarget(), enumerated(), count, index(of:), property observers, range operators."])
+        projects.append(Project(title: "Project 1: Storm Viewer", subtitle: "Constants and variables, UITableView, UIImageView, FileManager, storyboards"))
+        projects.append(Project(title: "Project 2: Guess the Flag", subtitle: "@2x and @3x images, asset catalogs, integers, doubles, floats, operators (+= and -=), UIButton, enums, CALayer, UIColor, random numbers, actions, string interpolation, UIAlertController"))
+        projects.append(Project(title: "Project 3: Social Media", subtitle: "UIBarButtonItem, UIActivityViewController, the Social framework, URL"))
+        projects.append(Project(title: "Project 4: Easy Browser", subtitle: "loadView(), WKWebView, delegation, classes and structs, URLRequest, UIToolbar, UIProgressView., key-value observing"))
+        projects.append(Project(title: "Project 5: Word Scramble", subtitle: "Closures, method return values, booleans, NSRange"))
+        projects.append(Project(title: "Project 6: Auto Layout", subtitle: "Get to grips with Auto Layout using practical examples and code"))
+        projects.append(Project(title: "Project 7: Whitehouse Petitions", subtitle: "JSON, Data, UITabBarController"))
+        projects.append(Project(title: "Project 8: 7 Swifty Words", subtitle: "addTarget(), enumerated(), count, index(of:), property observers, range operators."))
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +44,7 @@ class ViewController: UITableViewController {
         var config = UIListContentConfiguration.cell()
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let project = projects[indexPath.row]
-        config.attributedText = makeAttributedString(title: project[0], subtitle: project[1])
+        config.attributedText = makeAttributedString(title: project.title, subtitle: project.subtitle)
         cell.contentConfiguration = config
         
         if favorites.contains(indexPath.row) {
@@ -85,8 +85,8 @@ class ViewController: UITableViewController {
         let project = projects[item]
         
         let attributeSet = CSSearchableItemAttributeSet(contentType: UTType.text)
-        attributeSet.title = project[0]
-        attributeSet.contentDescription = project[1]
+        attributeSet.title = project.title
+        attributeSet.contentDescription = project.subtitle
         
         let item = CSSearchableItem(uniqueIdentifier: "\(item)", domainIdentifier: "com.hackingwithswift", attributeSet: attributeSet)
         item.expirationDate = .distantFuture

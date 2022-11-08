@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C04DFFD7291B1CB600EDBC33 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DFFD6291B1CB600EDBC33 /* Project.swift */; };
 		C09A2C1E2919BD3A0015A5B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A2C1D2919BD3A0015A5B4 /* AppDelegate.swift */; };
 		C09A2C202919BD3A0015A5B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A2C1F2919BD3A0015A5B4 /* SceneDelegate.swift */; };
 		C09A2C222919BD3A0015A5B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A2C212919BD3A0015A5B4 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C04DFFD6291B1CB600EDBC33 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		C09A2C1A2919BD3A0015A5B4 /* Project32.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project32.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09A2C1D2919BD3A0015A5B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C09A2C1F2919BD3A0015A5B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				C09A2C1D2919BD3A0015A5B4 /* AppDelegate.swift */,
 				C09A2C1F2919BD3A0015A5B4 /* SceneDelegate.swift */,
 				C09A2C212919BD3A0015A5B4 /* ViewController.swift */,
+				C04DFFD6291B1CB600EDBC33 /* Project.swift */,
 				C09A2C232919BD3A0015A5B4 /* Main.storyboard */,
 				C09A2C262919BD3C0015A5B4 /* Assets.xcassets */,
 				C09A2C282919BD3C0015A5B4 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				C09A2C222919BD3A0015A5B4 /* ViewController.swift in Sources */,
 				C09A2C1E2919BD3A0015A5B4 /* AppDelegate.swift in Sources */,
 				C09A2C202919BD3A0015A5B4 /* SceneDelegate.swift in Sources */,
+				C04DFFD7291B1CB600EDBC33 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
